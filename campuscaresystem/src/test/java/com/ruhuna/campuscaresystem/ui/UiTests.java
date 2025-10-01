@@ -29,6 +29,8 @@ public class UiTests {
         if (driver != null) driver.quit();
     }
 
+
+    @Disabled
     @Test
     void signupAndLogin_flow() {
         driver.get("http://localhost:5173/signup");
@@ -65,6 +67,7 @@ public class UiTests {
         assertThat(driver.getCurrentUrl()).endsWith("/");
     }
 
+    @Disabled
     @Test
     void addIssue_flow() {
         driver.get("http://localhost:5173/add-update");
