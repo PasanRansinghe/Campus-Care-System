@@ -33,11 +33,12 @@ jobs:
       with:
         distribution: 'temurin'  
         java-version: '17'
+        cache: 'maven'
 
 
     - name: Build and test backend
       run: |
-        cd backend
+        cd campuscaresystem
         ./mvnw clean test
 
     - name: Set up Node.js
@@ -47,15 +48,15 @@ jobs:
 
     - name: Install frontend dependencies
       run: |
-        cd frontend
+        cd Campus-Care-System
         npm install
 
     - name: Run UI tests
       run: |
-        cd frontend
+        cd Campus-Care-System
         npm run test:e2e # or however you run Selenium tests
 
     - name: Run API tests
       run: |
-        cd backend
+        cd campuscaresystem
         ./mvnw test -Dtest=ApiTests
