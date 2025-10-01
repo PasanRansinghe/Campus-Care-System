@@ -39,6 +39,7 @@ jobs:
     - name: Build and test backend
       run: |
         cd campuscaresystem
+        chmod +x mvnw
         ./mvnw clean test
 
     - name: Set up Node.js
@@ -56,7 +57,3 @@ jobs:
         cd Campus-Care-System
         npm run test:e2e # or however you run Selenium tests
 
-    - name: Run API tests
-      run: |
-        cd campuscaresystem
-        ./mvnw test -Dtest=ApiTests
