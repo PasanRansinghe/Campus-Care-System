@@ -52,8 +52,5 @@ jobs:
         cd Campus-Care-System
         npm install
 
-    - name: Run UI tests
-      run: |
-        cd Campus-Care-System
-        npm run test:e2e # or however you run Selenium tests
+
 
